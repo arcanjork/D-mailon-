@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loja D'Mailon</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="top-banner">Frete grátis para todo o Brasil!</div>
+    <nav>
+      <h1>D'Mailon</h1>
+      <ul>
+        <li><a href="#camisetas">Camisetas</a></li>
+        <li><a href="#calcas">Calças</a></li>
+        <li><a href="#sapatos">Sapatos</a></li>
+        <li><a href="#carrinho">Carrinho</a></li>
+      </ul>
+    </nav>
+    <div class="status">
+      <input type="text" id="busca" placeholder="Buscar produto..." onkeyup="filtrarProdutos()" />
+      <span id="contador">Itens no carrinho: 0</span>
+      <span id="total">Total: R$ 0.00</span>
+    </div>
+  </header>
+
+  <main>
+    <section id="camisetas">
+      <h2>Camisetas</h2>
+      <div class="produto" data-nome="Camiseta Estilosa">
+        <img src="imagens/camisa1.jpg" alt="Camiseta Estilosa" />
+        <p>Camiseta Estilosa - R$ 59.90</p>
+        <div class="estrelas">★★★★★</div>
+        <button onclick="adicionarCarrinho('Camiseta Estilosa', 59.90)">Comprar</button>
+      </div>
+    </section>
+
+    <section id="carrinho">
+      <h2>Resumo do Carrinho</h2>
+      <ul id="lista-carrinho"></ul>
+    </section>
+
+    <div id="alerta" class="alerta">Produto adicionado ao carrinho!</div>
+
+    <button onclick="finalizarCompra()">Finalizar Compra</button>
+  </main>
+
+  <footer>
+    <p>© 2025 Loja D'Mailon - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
